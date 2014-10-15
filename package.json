@@ -1,0 +1,24 @@
+{
+  "name": "node-moog",
+  "version": "1.0.0",
+  "description": "Publish events to the Incident.MOOG REST",
+  "main": "moog.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/moog-stephen/node-moog.git"
+  },
+  "keywords": [
+    "moog",
+    "incident.MOOG",
+    "REST"
+  ],
+  "author": "Moogsoft <stephen@moogsoft.com>",
+  "license": "Apache 2",
+  "bugs": {
+    "url": "https://github.com/moog-stephen/node-moog/issues"
+  },
+  "homepage": "https://github.com/moog-stephen/node-moog"
+}
