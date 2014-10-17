@@ -1,3 +1,5 @@
+![Moogsoft Logo](http://www.moogsoft.com/themes/moogsoft_2014/images/logo@2.png)
+
 # Incident.MOOG REST Client for Node.js
 
 Allows connecting to the Incident.MOOG REST LAM and sending events.
