@@ -2,7 +2,7 @@
  * Created by stephen on 16/10/2014.
  */
 
-var nm = require('./node-moog.js');
+var nm = require('node-moog');
 var options = {'url':'http://innomoog:8881','secret':'my_secret'};
 var moogEvent = new nm.MoogEvent();
 var moogRest = new nm.MoogREST(options);
