@@ -13,6 +13,10 @@ lib-cov
 # Coverage directory used by tools like istanbul
 coverage
 
+# Testing certs files
+ssl
+.ssl
+
 # Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
 .grunt
 
