@@ -60,7 +60,9 @@ var moogRest = require('node-moog').MoogREST({'url':'http://hostname:8888','secr
 ```
 Secret is optional and depends on the REST LAM configuration.
 
-**NOTE:** For V0.0.1 No support for https is in place
+To pass a server crt file pass the parameter options.certFile as a file path to the server crt.
+
+To pass a client crt file use options.caFile as the path, if you want a client cert you must also pass a server cert.
 
 ### Submit an event
 
@@ -71,6 +73,7 @@ Very simple to now submit an event to the REST LAM
 moogRest.sendEvent(moogEvent);
 
 ```
+The moogEvent can be a single event or an array of events
 
 The submit is an event emitter and will currently provide 2 events, ok and error
 

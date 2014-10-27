@@ -1,7 +1,7 @@
 {
   "name": "node-moog",
-  "version": "0.0.1",
-  "description": "Publish events to the Incident.MOOG REST",
+  "version": "0.0.2",
+  "description": "Publish events to the Incident.MOOG REST LAM",
   "main": "./lib/node-moog",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
