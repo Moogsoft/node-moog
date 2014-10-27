@@ -2,13 +2,8 @@
  * Created by stephen on 16/10/2014.
  */
 
-var nm = require('../lib/node-moog.js');
-var options = {'url':'https://innomoog:8881',
-    'secret':'my_secret',
-    certFile : '../ssl/server.crt',
-    caFile : '../ssl/client.crt'
-    };
-
+var nm = require('./node-moog.js');
+var options = {'url':'http://innomoog:8881','secret':'my_secret'};
 var moogEvent = new nm.MoogEvent();
 var moogRest = new nm.MoogREST(options);
 
@@ -25,13 +20,7 @@ var debug = function(){
 moogEvent.description = 'My new description';
 debug('Event generated '+JSON.stringify(moogEvent));
 
-try {
-    moogRest.sendEvent(moogEvent);
-}
-catch(e){
-    console.log('Connection or send error '+e);
-}
-
+moogRest.sendEvent(moogEvent);
 
 moogRest.on('ok', function(res) {
     console.log('moogRest message sent '+res);
