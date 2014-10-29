@@ -64,12 +64,32 @@ To pass a server crt file pass the parameter options.certFile as a file path to 
 
 To pass a client crt file use options.caFile as the path, if you want a client cert you must also pass a server cert.
 
+````javascript
+
+var nm = require('node-moog');
+
+// Set the options to your specific configuration.
+var options = {'url':'https://innomoog:8881',
+    'secret':'my_secret',
+    certFile : '../ssl/server.crt',
+    caFile : '../ssl/client.crt'
+    };
+
+// Create a proforma event
+var moogEvent = new nm.MoogEvent();
+// Init a connection object
+var moogRest = new nm.MoogREST(options);
+
+````
+
 ### Submit an event
 
 Very simple to now submit an event to the REST LAM
 
 ```javascript
 
+moogEvent.description = 'My new description';
+// Many defaults are set for you.
 moogRest.sendEvent(moogEvent);
 
 ```
