@@ -101,13 +101,16 @@ The submit is an event emitter and will currently provide 2 events, ok and error
 
 ```javascript
 
-moogRest.on('ok', function(res) {
-    console.log('moogRest message sent '+res);
-    process.exit(0);
-});
-moogRest.on('error', function(err) {
-    console.log('moogRest error '+err);
-    process.exit(1);
+moogRest.sendEvent(moogEvent, function (res, rtn) {
+    if (rtn == 200) {
+        console.log('moogRest message sent, return code: ' + rtn);
+        console.log('moogRest result: ' + res.message);
+        process.exit(0);
+    } else {
+        console.log('moogRest - ' + rtn);
+        console.log('moogRest - ' + res);
+        process.exit(1);
+    }
 });
 
 ```
