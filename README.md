@@ -90,7 +90,7 @@ Very simple to now submit an event to the REST LAM
 
 moogEvent.description = 'My new description';
 // Many defaults are set for you.
-moogRest.sendEvent(moogEvent);
+moogRest.sendEvent(moogEvent,callback());
 
 ```
 The moogEvent can be a single event or an array of events
