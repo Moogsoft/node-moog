@@ -5,7 +5,7 @@
 var nm = require('node-moog');
 var options = {
     'url': 'https://innomoog:8881',
-    'secret': 'my_secret',
+    'auth_token': 'my_secret',
     certFile: '../ssl/server.crt',
     caFile: '../ssl/client.crt'
 };

@@ -55,10 +55,10 @@ Create a connection to the REST LAM
 
 ```javascript
 
-var moogRest = require('node-moog').MoogREST({'url':'http://hostname:8888','secret':'my_secret'});
+var moogRest = require('node-moog').MoogREST({'url':'http://hostname:8888','auth_token':'my_secret'});
 
 ```
-Secret is optional and depends on the REST LAM configuration.
+auth_token is optional and depends on the REST LAM configuration.
 
 To pass a server crt file pass the parameter options.certFile as a file path to the server crt.
 
@@ -70,7 +70,7 @@ var nm = require('node-moog');
 
 // Set the options to your specific configuration.
 var options = {'url':'https://innomoog:8881',
-    'secret':'my_secret',
+    'auth_token':'my_secret',
     certFile : '../ssl/server.crt',
     caFile : '../ssl/client.crt'
     };
@@ -81,6 +81,7 @@ var moogEvent = new nm.MoogEvent();
 var moogRest = new nm.MoogREST(options);
 
 ````
+When creating the Proforma you can pass a partial MoogEvent as a default, if not default values will be provided for you.
 
 ### Submit an event
 
