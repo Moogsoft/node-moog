@@ -5,10 +5,10 @@
 var nm = require('node-moog');
 var util = require('util');
 var options = {
-    'url': 'https://innomoog:8881',
+    'url': 'http://innomoog:8881',
     'auth_token': 'my_secret',
-    certFile: '../ssl/server.crt',
-    caFile: '../ssl/client.crt'
+    'certFile': '../ssl/server.crt',
+    'caFile': '../ssl/client.crt'
 };
 var moogEvent = new nm.MoogEvent();
 var moogRest = new nm.MoogREST(options);
@@ -32,7 +32,7 @@ moogRest.sendEvent(moogEvent, function (res, rtn) {
         process.exit(0);
     } else {
         util.error('moogRest - ' + rtn);
-        util.error('moogRest - ' + res);
+        util.error('moogRest - ' + util.inspect(res));
         process.exit(1);
     }
 });
