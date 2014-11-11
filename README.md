@@ -8,7 +8,7 @@ Allows connecting to the Incident.MOOG REST LAM and sending events.
 - Provides for passing the shared secret
 - Provides specific port designation
 
-[![npm](http://img.shields.io/npm/v/node-moog.svg?style=flat)]
+[![npm](http://img.shields.io/npm/v/node-moog.svg?style=flat)] (https://www.npmjs.org/package/node-moog)
 
 ## Installation
 
