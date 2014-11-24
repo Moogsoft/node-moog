@@ -67,7 +67,7 @@ To pass a client crt file use options.caFile as the path, if you want a client c
 
 ````javascript
 
-var nm = require('node-moog');
+var moog = require('node-moog');
 
 // Set the options to your specific configuration.
 var options = {'url':'https://innomoog:8881',
@@ -77,9 +77,9 @@ var options = {'url':'https://innomoog:8881',
     };
 
 // Create a proforma event
-var moogEvent = new nm.MoogEvent();
+var moogEvent = new moog.MoogEvent();
 // Init a connection object
-var moogRest = new nm.MoogREST(options);
+var moogRest = moog.moogREST(options);
 
 ````
 When creating the Proforma you can pass a partial MoogEvent as a default, if not default values will be provided for you.

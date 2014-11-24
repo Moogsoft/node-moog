@@ -1,6 +1,6 @@
 {
   "name": "node-moog",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Publish events to the Incident.MOOG REST LAM",
   "main": "./lib/node-moog",
   "scripts": {
