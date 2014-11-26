@@ -1,5 +1,7 @@
 ![Moogsoft Logo](http://www.moogsoft.com/themes/moogsoft_2014/images/logo@2.png)
 
+[![npm](http://img.shields.io/npm/v/node-moog.svg?style=flat)] (https://www.npmjs.org/package/node-moog)
+
 # Incident.MOOG REST Client for Node.js
 
 Allows connecting to the Incident.MOOG REST LAM and sending events.
@@ -11,8 +13,6 @@ Allows connecting to the Incident.MOOG REST LAM and sending events.
 ## Installation
 
 $ npm install node-moog
-
-[![npm](http://img.shields.io/npm/v/node-moog.svg?style=flat)] (https://www.npmjs.org/package/node-moog)
 
 ## Usage
 
