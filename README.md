@@ -3,7 +3,7 @@
 ## Incident.MOOG REST Client for Node.js
 
 
-[![NPM](http://img.shields.io/npm/v/node-moog.svg)](https://www.npmjs.org/package/node-moog)[![Code Climate](https://codeclimate.com/github/Moogsoft/node-moog/badges/gpa.svg)](https://codeclimate.com/github/Moogsoft/node-moog)
+[![NPM](http://img.shields.io/npm/v/node-moog.svg)](https://www.npmjs.org/package/node-moog) [![Code Climate](https://codeclimate.com/github/Moogsoft/node-moog/badges/gpa.svg)](https://codeclimate.com/github/Moogsoft/node-moog)
 
 [![NPM](https://nodei.co/npm/node-moog.png?downloads=true)](https://nodei.co/npm/node-moog/)
 
