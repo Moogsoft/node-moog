@@ -1,8 +1,12 @@
 ![Moogsoft Logo](http://www.moogsoft.com/themes/moogsoft_2014/images/logo@2.png)
 
-[![npm](http://img.shields.io/npm/v/node-moog.svg?style=flat)] (https://www.npmjs.org/package/node-moog)
+## Incident.MOOG REST Client for Node.js
 
-# Incident.MOOG REST Client for Node.js
+
+[![NPM](http://img.shields.io/npm/v/node-moog.svg?style=flat)](https://www.npmjs.org/package/node-moog)[![Code Climate](https://codeclimate.com/github/Moogsoft/node-moog/badges/gpa.svg)](https://codeclimate.com/github/Moogsoft/node-moog)
+
+[![NPM](https://nodei.co/npm/node-moog.png?downloads=true)](https://nodei.co/npm/node-moog/)
+
 
 Allows connecting to the Incident.MOOG REST LAM and sending events.
 
