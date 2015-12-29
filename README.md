@@ -1,4 +1,4 @@
-![Moogsoft Logo](http://www.moogsoft.com/themes/moogsoft_2014/images/logo@2.png)
+![Moogsoft Logo](https://www.moogsoft.com/wp-content/uploads/2015/06/logo-moogsoft.png)
 
 ## Incident.MOOG REST Client for Node.js
 
@@ -65,6 +65,16 @@ var moogRest = require('node-moog').MoogREST({'url':'http://hostname:8888','auth
 ```
 auth_token is optional and depends on the REST LAM configuration.
 
+```javascript
+
+var moogRest = require('node-moog').MoogREST({'url':'http://hostname:8888','authUser':'graze','authPass':'graze'});
+
+```
+authUser and authPass are for basic auth and depend on the REST LAM configuration, 
+it is strongly advised to use basic auth with tls, requires version 5.0.7+ of moog REST LAM.
+
+To use tls (https)
+
 To pass a server crt file pass the parameter options.certFile as a file path to the server crt.
 
 To pass a client crt file use options.caFile as the path, if you want a client cert you must also pass a server cert.
@@ -75,9 +85,10 @@ var moog = require('node-moog');
 
 // Set the options to your specific configuration.
 var options = {'url':'https://innomoog:8881',
-    'auth_token':'my_secret',
-    certFile : '../ssl/server.crt',
-    caFile : '../ssl/client.crt'
+    'authUser':'graze',
+    'authPass':'graze',
+    'certFile' : '../ssl/server.crt',
+    'caFile' : '../ssl/client.crt'
     };
 
 // Create a proforma event
