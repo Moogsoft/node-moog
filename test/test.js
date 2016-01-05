@@ -5,10 +5,9 @@
 var moog = require('../lib/node-moog');
 var util = require('util');
 var options = {
-    'url': 'http://innomoog:8881',
-    'auth_token': 'my_secret',
-    'certFile': '../ssl/server.crt',
-    'caFile': '../ssl/client.crt'
+    'url': 'http://localhost:8888',
+    'authUser': 'graze',
+    'authPass': 'graze'
 };
 var moogEvent = new moog.MoogEvent();
 var moogREST = moog.moogREST(options);
