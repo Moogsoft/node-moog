@@ -67,7 +67,7 @@ auth_token is optional and depends on the REST LAM configuration.
 
 ```javascript
 
-var moogRest = require('node-moog').MoogREST({'url':'http://hostname:8888','authUser':'graze','authPass':'graze'});
+var moogRest = require('node-moog').MoogREST({'url':'http://hostname:8888','authUser':'graze','authPass':'xxxxx'});
 
 ```
 authUser and authPass are for basic auth and depend on the REST LAM configuration, 
@@ -97,7 +97,7 @@ var moogEvent = new moog.MoogEvent();
 var moogRest = moog.moogREST(options);
 
 ````
-When creating the Proforma you can pass a partial MoogEvent as a default, if not default values will be provided for you.
+When creating the Proforma you can pass a partial MoogEvent as a default, if not, default values will be provided for you.
 
 ### Submit an event
 
