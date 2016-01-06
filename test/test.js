@@ -20,7 +20,7 @@ var debug = function () {
     var args = Array.prototype.slice.call(arguments);
     var lines = stack.split('\n');
     var callee = lines[2].match(/at .* /i); //used because of use strict
-    util.debug('[test.js] '+callee+' -> '+args);
+    util.log('[test.js] ' + callee + ' -> ' + args);
 };
 
 moogEvent.description = 'My new description';
@@ -31,8 +31,8 @@ moogREST.sendEvent(moogEvent, function (res, rtn) {
         util.log('moogREST message sent, return code: ' + res.statusCode);
         util.log('moogREST result: ' + util.inspect(rtn));
     } else {
-        util.error('moogREST - ' + util.inspect(res));
-        util.error('moogREST - ' + util.inspect(rtn));
+        console.error('moogREST - ' + util.inspect(res));
+        console.error('moogREST - ' + util.inspect(rtn));
     }
 });
 
