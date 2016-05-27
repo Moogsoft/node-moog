@@ -20,9 +20,5 @@
   "bugs": {
     "url": "https://github.com/moogsoft/node-moog/issues"
   },
-  "homepage": "https://github.com/moogsoft/node-moog",
-  "devDependencies": {
-    "grunt": "*",
-    "grunt-jsdoc": "^0.5.7"
-  }
+  "homepage": "https://github.com/moogsoft/node-moog"
 }
