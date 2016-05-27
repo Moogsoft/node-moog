@@ -5,9 +5,9 @@
 var moog = require('../lib/node-moog');
 var util = require('util');
 var options = {
-    'url': 'http://localhost:8888',
-    'authUser': 'graze',
-    'authPass': 'graze'
+    url: 'https://moogtest/rest_lam',
+    authUser: 'graze',
+    authPass: 'graze'
 };
 var moogEvent = new moog.MoogEvent();
 var moogREST = moog.moogREST(options);
@@ -26,13 +26,13 @@ var debug = function () {
 moogEvent.description = 'My new description';
 debug('Event generated ' + util.inspect(moogEvent));
 
-moogREST.sendEvent(moogEvent, function (res, rtn) {
-    if (res.statusCode == 200) {
-        util.log('moogREST message sent, return code: ' + res.statusCode);
-        util.log('moogREST result: ' + util.inspect(rtn));
+moogREST.sendEvent(moogEvent, function (req, res) {
+    if (req.statusCode == 200) {
+        util.log('[pass] moogREST message sent, return code: ' + req.statusCode + ' ' + req.statusMessage);
+        util.log('[pass] moogREST result: ' + util.inspect(res));
     } else {
-        console.error('moogREST - ' + util.inspect(res));
-        console.error('moogREST - ' + util.inspect(rtn));
+        util.log('[fail] moogREST - ' + req.statusCode + ' ' + req.statusMessage);
+        util.log('[fail] moogREST - ' + util.inspect(res));
     }
 });
 
@@ -47,13 +47,13 @@ for (var e = 0; e < 10 ; e++){
 }
 util.log('*** Now Sending '+eArray.length+' events');
 
-moogREST.sendEvent(eArray, function (res, rtn) {
-    if (res.statusCode == 200) {
-        util.log('[pass] moogREST message array sent, return code: ' + res.statusCode);
-        util.log('[pass] moogREST array result: ' + util.inspect(rtn));
+moogREST.sendEvent(eArray, function (req, res) {
+    if (req.statusCode == 200) {
+        util.log('[pass] moogREST message array sent, return code: ' + req.statusCode + ' ' + req.statusMessage);
+        util.log('[pass] moogREST array result: ' + util.inspect(res));
     } else {
+        util.log('[fail] moogREST - ' + req.statusCode + ' ' + req.statusMessage);
         util.log('[fail] moogREST - ' + util.inspect(res));
-        util.log('[fail] moogREST - ' + util.inspect(rtn));
     }
 });
 
@@ -62,17 +62,18 @@ var foo = {bar:'foo'};
 
 util.log('*** Now Sending silly event foo');
 
-moogREST.sendEvent(foo, function (res, rtn) {
-    if (res.statusCode == 200) {
-        util.log('[fail] moogREST silly message sent, return code: ' + res.statusCode);
-        util.log('[fail] moogREST silly result: ' + util.inspect(rtn));
+moogREST.sendEvent(foo, function (req, res) {
+    if (req.statusCode == 200) {
+        util.log('[fail] moogREST silly message sent, return code: ' + req.statusCode);
+        util.log('[fail] moogREST silly result: ' + util.inspect(res));
     } else {
+        util.log('[pass] moogREST silly message - ' + util.inspect(req) + ' ' + req.statusCode + ' ' + req.statusMessage);
         util.log('[pass] moogREST - ' + util.inspect(res));
-        util.log('[pass] moogREST - ' + util.inspect(rtn));
     }
 });
 
-// Without a new?
+// Without new
+//
 var mooEvent;
 mooEvent = moog.MoogEvent();
 if (mooEvent.description) {
@@ -83,13 +84,15 @@ if (mooEvent.description) {
 }
 mooEvent.description = "MOO";
 mooEvent = moog.MoogEvent();
-if (mooEvent.description) {
+if (mooEvent.description === "MOO") {
     util.log('[Fail] New mooEvent - has MOO description '+mooEvent.description);
 } else {
     util.log('[Pass] New mooEvent - has no description '+mooEvent.description);
     util.log('Is it a MoogEvent? '+(mooEvent instanceof moog.MoogEvent));
 }
 
+//With new
+//
 mooEvent = new moog.MoogEvent();
 if (mooEvent.description) {
     util.log('[Fail] New mooEvent - has description '+mooEvent.description);
@@ -99,7 +102,7 @@ if (mooEvent.description) {
 }
 mooEvent.description = "MOO";
 mooEvent = moog.MoogEvent();
-if (mooEvent.description) {
+if (mooEvent.description === "MOO") {
     util.log('[Fail] New mooEvent - has MOO description '+mooEvent.description);
 } else {
     util.log('[Pass] New mooEvent - has no description '+mooEvent.description);
