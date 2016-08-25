@@ -25,7 +25,7 @@ $ npm install node-moog
 Populate a pre configured event object
  MoogEvent(mEvent)
 
-mEvent is a optional default event template, if none is supplied then reasonable defaults are used for many fields
+mEvent is an optional default event template, if none is supplied then reasonable defaults are used for many fields
 
 ```javascript
 var MoogEvent = require('node-moog').MoogEvent;
