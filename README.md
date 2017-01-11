@@ -54,20 +54,20 @@ Elements available in an event.
 ### Create a connection
 
 Create a connection to the REST LAM
- MoogREST(options)
+ moogREST(options)
 
  options is an object containing connection specific settings
 
 ```javascript
 
-var moogRest = require('node-moog').MoogREST({'url':'http://hostname:8888','auth_token':'my_secret'});
+var moogRest = require('node-moog').moogREST({'url':'http://hostname:8888','auth_token':'my_secret'});
 
 ```
 auth_token is optional and depends on the REST LAM configuration.
 
 ```javascript
 
-var moogRest = require('node-moog').MoogREST({'url':'http://hostname:8888','authUser':'graze','authPass':'xxxxx'});
+var moogRest = require('node-moog').moogREST({'url':'http://hostname:8888','authUser':'graze','authPass':'xxxxx'});
 
 ```
 authUser and authPass are for basic auth and depend on the REST LAM configuration, 
