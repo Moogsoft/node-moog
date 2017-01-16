@@ -54,7 +54,7 @@ Elements available in an event.
 ### Create a connection
 
 Create a connection to the REST LAM
- MoogREST(options)
+ moogREST(options)
 
  options is an object containing connection specific settings
 
