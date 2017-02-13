@@ -131,3 +131,20 @@ moogRest.sendEvent(moogEvent, function (res, rtn) {
 });
 
 ```
+### Use a Proxy
+To use an outbound proxy just add your favorate agent.
+
+Example code using proxy-agent.
+```
+var ProxyAgent = require('proxy-agent');
+var proxyUri = process.env.http_proxy || 'http://user:pass@proxy.host:3128';
+
+var options = {
+    url: 'https://moogtest/rest_lam',
+    authUser: 'graze',
+    authPass: 'graze',
+    agent: new ProxyAgent(proxyUri)
+};
+var moogEvent = new moog.MoogEvent();
+var moogREST = moog.moogREST(options);
+```
