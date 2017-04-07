@@ -8,9 +8,9 @@ var ProxyAgent = require('proxy-agent');
 var proxyUri = process.env.http_proxy || 'http://user:pass@proxy.host:3128';
 
 var options = {
-    url: 'https://moogtest/rest_lam',
-    authUser: 'graze',
-    authPass: 'graze',
+    url: 'https://qa.moogsoft.com/events/generic_generic1',
+    authUser: 'Generic',
+    authPass: 'JaqYxSXq2PdXXXmA',
     agent: new ProxyAgent(proxyUri)
 };
 var moogEvent = new moog.MoogEvent();

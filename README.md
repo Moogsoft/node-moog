@@ -1,6 +1,6 @@
 ![Moogsoft Logo](https://www.moogsoft.com/wp-content/uploads/2017/02/moog-logo.png)
 
-## Incident.MOOG REST Client for Node.js
+## MOOG AIOps REST Client for Node.js
 
 
 [![NPM](http://img.shields.io/npm/v/node-moog.svg)](https://www.npmjs.org/package/node-moog) [![Code Climate](https://codeclimate.com/github/Moogsoft/node-moog/badges/gpa.svg)](https://codeclimate.com/github/Moogsoft/node-moog)

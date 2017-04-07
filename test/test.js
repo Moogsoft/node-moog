@@ -5,9 +5,9 @@
 var moog = require('../lib/node-moog');
 var util = require('util');
 var options = {
-    url: 'https://moogtest/rest_lam',
-    authUser: 'graze',
-    authPass: 'graze'
+    url: 'https://qa.moogsoft.com/events/generic_generic1',
+    authUser: 'Generic',
+    authPass: 'Iuvf0yBbrWMsXULy'
 };
 var moogEvent = new moog.MoogEvent();
 var moogREST = moog.moogREST(options);
