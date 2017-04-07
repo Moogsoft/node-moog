@@ -1,4 +1,4 @@
-![Moogsoft Logo](https://www.moogsoft.com/wp-content/uploads/2015/06/logo-moogsoft.png)
+![Moogsoft Logo](https://www.moogsoft.com/wp-content/uploads/2017/02/moog-logo.png)
 
 ## Incident.MOOG REST Client for Node.js
 
@@ -8,7 +8,7 @@
 [![NPM](https://nodei.co/npm/node-moog.png?downloads=true)](https://nodei.co/npm/node-moog/)
 
 
-Allows connecting to the Incident.MOOG REST LAM and sending events.
+Allows connecting to the MOOG AIOps REST LAM and sending events to be used by the algorithmic processing functions of the product.
 
 - Provides a formatted event object with reasonable defaults
 - Provides for passing the shared secret
@@ -84,9 +84,9 @@ To pass a client crt file use options.caFile as the path, if you want a client c
 var moog = require('node-moog');
 
 // Set the options to your specific configuration.
-var options = {'url':'https://innomoog:8881',
-    'authUser':'graze',
-    'authPass':'graze',
+var options = {'url':'https://hostname:8881',
+    'authUser':'user',
+    'authPass':'****',
     'certFile' : '../ssl/server.crt',
     'caFile' : '../ssl/client.crt'
     };
@@ -135,16 +135,17 @@ moogRest.sendEvent(moogEvent, function (res, rtn) {
 To use an outbound proxy just add your favorate agent.
 
 Example code using proxy-agent.
-```
+```javascript
 var ProxyAgent = require('proxy-agent');
 var proxyUri = process.env.http_proxy || 'http://user:pass@proxy.host:3128';
 
 var options = {
     url: 'https://moogtest/rest_lam',
-    authUser: 'graze',
-    authPass: 'graze',
+    authUser: 'moog_user',
+    authPass: '****',
     agent: new ProxyAgent(proxyUri)
 };
 var moogEvent = new moog.MoogEvent();
 var moogREST = moog.moogREST(options);
 ```
+Additional fields can be added to the event object and they will be passed to the overflow property of the alert.

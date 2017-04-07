@@ -1,7 +1,7 @@
 {
   "name": "node-moog",
-  "version": "1.2.5",
-  "description": "Publish events to the Incident.MOOG REST LAM",
+  "version": "1.2.6",
+  "description": "Publish events to the MOOG AIOps REST LAM",
   "main": "./lib/node-moog",
   "scripts": {
     "test": "./test/test.js"
