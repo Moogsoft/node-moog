@@ -1,6 +1,6 @@
 {
   "name": "node-moog",
-  "version": "1.2.7",
+  "version": "1.2.8",
   "description": "Publish events to the MOOG AIOps REST LAM",
   "main": "./lib/node-moog",
   "scripts": {
@@ -13,9 +13,12 @@
   "keywords": [
     "moog",
     "incident.MOOG",
+    "Moogsoft AIops",
+    "AIOps",
+    "Moogsoft",
     "REST"
   ],
-  "author": "Moogsoft <stephen@moogsoft.com>",
+  "author": "Moogsoft <integrations@moogsoft.com>",
   "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/moogsoft/node-moog/issues"

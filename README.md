@@ -1,6 +1,6 @@
 ![Moogsoft Logo](https://www.moogsoft.com/wp-content/uploads/2017/02/moog-logo.png)
 
-## MOOG AIOps REST Client for Node.js
+## Moogsoft AIOps REST Client for Node.js
 
 
 [![NPM](http://img.shields.io/npm/v/node-moog.svg)](https://www.npmjs.org/package/node-moog) [![Code Climate](https://codeclimate.com/github/Moogsoft/node-moog/badges/gpa.svg)](https://codeclimate.com/github/Moogsoft/node-moog)
@@ -8,7 +8,7 @@
 [![NPM](https://nodei.co/npm/node-moog.png?downloads=true)](https://nodei.co/npm/node-moog/)
 
 
-Allows connecting to the MOOG AIOps REST LAM and sending events to be used by the algorithmic processing functions of the product.
+Allows connecting to the Moogsoft AIOps REST LAM and sending events to be used by the algorithmic processing functions of the product.
 
 - Provides a formatted event object with reasonable defaults
 - Provides for passing the shared secret
